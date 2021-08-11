@@ -1,0 +1,41 @@
+name: cron-update
+
+on:
+  schedule:
+    - cron: '52 8 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: main
+          lfs: true
+      
+      - name: Checkout rulesets
+        uses: actions/checkout@v2
+        with:
+          repository: yettera765/rulesets
+          ref: dev
+          token: ${{ secrets.API_AUTO_UPDATE }}
+          path: rulesets
+
+      - name: Run
+        run: |
+          cd main/ruleset
+          ./rule-combiner -o ${GITHUB_WORKSPACE}/rulesets
+
+      - name: commit
+        run: |
+          cd ${GITHUB_WORKSPACE}/rulesets/
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push

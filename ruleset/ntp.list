@@ -1,0 +1,29 @@
+## > openwrt提供的ntp服务
+DOMAIN-SUFFIX,0.openwrt.pool.ntp.org
+DOMAIN-SUFFIX,1.openwrt.pool.ntp.org
+DOMAIN-SUFFIX,2.openwrt.pool.ntp.org
+DOMAIN-SUFFIX,3.openwrt.pool.ntp.org
+## > Apple提供的ntp服务
+DOMAIN-SUFFIX,time.apple.com
+DOMAIN-SUFFIX,time1.apple.com
+DOMAIN-SUFFIX,time2.apple.com
+DOMAIN-SUFFIX,time3.apple.com
+DOMAIN-SUFFIX,time4.apple.com
+DOMAIN-SUFFIX,time5.apple.com
+DOMAIN-SUFFIX,time6.apple.com
+DOMAIN-SUFFIX,time7.apple.com
+DOMAIN-SUFFIX,time.asia.apple.com
+## > 社区公用ntp服务池
+DOMAIN-SUFFIX,pool.ntp.org
+DOMAIN-SUFFIX,cn.ntp.org.cn
+DOMAIN-SUFFIX,edu.ntp.org.cn
+DOMAIN-SUFFIX,hk.ntp.org.cn
+DOMAIN-SUFFIX,tw.ntp.org.cn
+DOMAIN-SUFFIX,us.ntp.org.cn
+DOMAIN-SUFFIX,sgp.ntp.org.cn
+DOMAIN-SUFFIX,kr.ntp.org.cn
+DOMAIN-SUFFIX,jp.ntp.org.cn
+DOMAIN-SUFFIX,de.ntp.org.cn
+DOMAIN-SUFFIX,ina.ntp.org.cn
+## > Windows提供的ntp服务
+DOMAIN-SUFFIX,time.windows.com
