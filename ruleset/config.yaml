@@ -25,6 +25,7 @@ proxy:
     - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Microsoft/OneDrive.list
     - rule: https://raw.githubusercontent.com/LM-Firefly/Rules/master/PROXY/Twitch.list
     - rule: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Global-Services/Spotify.list
+    - ip: https://raw.githubusercontent.com/QiuSimons/Netflix_IP/master/getflix.txt
 direct:
   noip: true
   links:
@@ -33,5 +34,7 @@ direct:
     - rule: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
     - ip: https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt
     - ip: https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt
+    - ip: https://raw.githubusercontent.com/QiuSimons/Chnroute/master/dist/chnroute/chnroute.txt
+    - ip: https://raw.githubusercontent.com/QiuSimons/Chnroute/master/dist/chnroute/chnroute-v6.txt
     - rule: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Special/TeamViewer-CIDR.list
     - rule: https://raw.githubusercontent.com/LM-Firefly/Rules/master/CCC-CN.list
