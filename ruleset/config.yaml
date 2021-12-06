@@ -6,6 +6,7 @@ unbreak:
   links:
     - rule: https://raw.githubusercontent.com/yettera765/scripts/main/ruleset/ntp.list
     - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list
+    - rule: https://raw.githubusercontent.com/yettera765/scripts/main/ruleset/unbreak.list
 block:
   links:
     - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list
