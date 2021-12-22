@@ -3,7 +3,7 @@
  */
 
 // consts
-const cmtHeaders = ["//", "#", ";"];
+const clashRuleHeader = "- ";
 
 // main
 $done({content: parse($resource.content)})
@@ -13,17 +13,10 @@ function parse(c) { return c.split("\n").map(lineParser).join("\n") }
 
 function lineParser(line) {
     const trimed = line.trim()
-    // return empty line and comments
-    if (trimed === "") return ""
-    if (isComments(trimed)) return trimed
+    if (trimed.indexOf(clashRuleHeader) !== 0) return ""
     // return a processed rule 
-    const parts = trimed.split(",")
+    const parts = trimed.substring(2).split(",")
     return processParts(parts)
-}
-
-function isComments(trimedLine) {
-    const ignoreComments = (item) => trimedLine.indexOf(item) === 0
-    return cmtHeaders.some(ignoreComments)
 }
 
 function processParts(parts) {
@@ -35,13 +28,12 @@ function processParts(parts) {
 function replaceRuleTypeKey(ruleTypeKey) {
     const lowered = ruleTypeKey.toLowerCase()
     const keyTest = (item) => lowered.indexOf(item) === 0
-    if (keyTest("ip-cidr6")) return lowered.replace("ip-cidr6", "ip6-cidr")
-    if (keyTest("url-regex")) return `# ${lowered}`
     if (keyTest("process")) return `# ${lowered}`
+    if (keyTest("ip-cidr6")) return lowered.replace("ip-cidr6", "ip6-cidr")
     return lowered
 }
 
-function trimInlineComment(line) { return line.split("//")[0].trim() }
+function trimInlineComment(line) { return line.split("#")[0].trim() }
 
 function formatLine(qxHeader, urlPart, originParts) {
     const l = originParts.length
