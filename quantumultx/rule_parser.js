@@ -3,7 +3,9 @@
  */
 
 // consts
+const clashPayload = "payload:"
 const clashRuleHeader = "- ";
+const commentHeader = "#";
 
 // main
 $done({content: parse($resource.content)})
@@ -13,9 +15,12 @@ function parse(c) { return c.split("\n").map(lineParser).join("\n") }
 
 function lineParser(line) {
     const trimed = line.trim()
-    if (trimed.indexOf(clashRuleHeader) !== 0) return ""
+    if (trimed.indexOf(clashPayload) === 0 ) return ""
+    if (len(trimed) === 0) return ""
+    if (trimed.indexOf(commentHeader) === 0) return ""
+    if (trimed.indexOf(clashRuleHeader) === 0) { trimed = trimed.substring(2) }
     // return a processed rule 
-    const parts = trimed.substring(2).split(",")
+    const parts = trimed.split(",")
     return processParts(parts)
 }
 
