@@ -33,7 +33,7 @@ function processParts(parts) {
 function replaceRuleTypeKey(ruleTypeKey) {
     const lowered = ruleTypeKey.toLowerCase()
     const keyTest = (item) => lowered.indexOf(item) === 0
-    if (keyTest("process")) return `# ${lowered}`
+    if (keyTest("process-name")) return `# ${lowered}`
     if (keyTest("ip-cidr6")) return lowered.replace("ip-cidr6", "ip6-cidr")
     if (keyTest("domain")) return lowered.replace("domain", "host")
     return lowered
