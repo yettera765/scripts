@@ -15,11 +15,12 @@ function parse(c) { return c.split("\n").map(lineParser).join("\n") }
 
 function lineParser(line) {
     const trimed = (line.indexOf(clashRuleHeader) === 0) ? line.substring(2).trim() : line.trim()
-    if (len(trimed) === 0) return ""
+    if (trimed.length === 0) return ""
     if (trimed.indexOf(clashPayload) === 0 ) return ""
     if (trimed.indexOf(commentHeader) === 0) return ""
     // return a processed rule 
     const parts = trimed.split(",")
+    if (parts.length < 2) return ""
     return processParts(parts)
 }
 
