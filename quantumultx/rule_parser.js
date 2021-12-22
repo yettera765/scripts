@@ -14,7 +14,7 @@ $done({content: parse($resource.content)})
 function parse(c) { return c.split("\n").map(lineParser).join("\n") }
 
 function lineParser(line) {
-    const trimed = (line.indexOf(clashRuleHeader) === 0) ? line.substring(2).trim() : line.trim()
+    const trimed = (line.trim().indexOf(clashRuleHeader) === 0) ? line.trim().substring(2) : line.trim()
     if (trimed.length === 0) return ""
     if (trimed.indexOf(clashPayload) === 0 ) return ""
     if (trimed.indexOf(commentHeader) === 0) return ""
