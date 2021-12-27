@@ -1,6 +1,5 @@
 dns:
   - rule: https://raw.githubusercontent.com/yettera765/scripts/main/ruleset/dns.list
-  - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/TelegramUS.list
 unbreak:
   - rule: https://raw.githubusercontent.com/yettera765/scripts/main/ruleset/ntp.list
   - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list
@@ -9,15 +8,10 @@ block:
   - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list
   - rule: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list 
   - rule: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
-  - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list
   - rule: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 proxy:
   - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list
-  - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list
-  - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Google/GoogleVoice.list
 direct:
   - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list
-  - rule: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
   - ip: https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt
-  - ip: https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt
   - rule: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Special/TeamViewer-CIDR.list
