@@ -1,4 +1,5 @@
 # alipay & wechat
-DOMAIN-SUFFIX,alipay.com
+DOMAIN-KEYWORD,alipay
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
+DOMAIN-SUFFIX,gs-loc-cn.apple.com
