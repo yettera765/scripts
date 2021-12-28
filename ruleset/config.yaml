@@ -1,5 +1,3 @@
-dns:
-  - rule: https://raw.githubusercontent.com/yettera765/scripts/main/ruleset/dns.list
 unbreak:
   - rule: https://raw.githubusercontent.com/yettera765/scripts/main/ruleset/ntp.list
   - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list
