@@ -34,7 +34,7 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/rulesets/
           date > generated.txt
-          wget https://github.com/yettera765/mmdb-builder/releases/download/latest/Country.mmdb
+          curl -L -o Country.mmdb https://github.com/yettera765/mmdb-builder/releases/download/latest/Country.mmdb
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
