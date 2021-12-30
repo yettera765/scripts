@@ -9,6 +9,7 @@ block:
   - rule: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
   - rule: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 block-lite:
+  - rule: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
   - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list
   - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list
   - rule: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list
