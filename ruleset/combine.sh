@@ -15,6 +15,6 @@ for yml in unbreak block proxy direct; do
       pattern="${pat} s/$/,REJECT/g"
       ;;
   esac
-  sed "$pattern" "$DIR/${yml}.yaml" >> "$RULE"
   echo >> "$RULE"
+  sed "$pattern" "$DIR/${yml}.yaml" >> "$RULE"
 done
