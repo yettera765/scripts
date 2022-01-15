@@ -2,7 +2,7 @@ DIR="$1/clash"
 RULE="$DIR/rules"
 
 rm -f "$RULE"
-pat='s/payload://g;'
+pat='s/payload://g; /^[[:space:]]*$/d'
 for yml in unbreak block proxy direct; do
   case $yml in
     proxy)
