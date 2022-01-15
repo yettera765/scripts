@@ -2,7 +2,7 @@ DIR="$1/clash"
 RULE="$DIR/rules"
 
 rm -f "$RULE"
-pat='s/payload://g; s/^  - //g; /^[[:space:]]*$/d;'
+pat='s/payload://g;'
 for yml in unbreak block proxy direct; do
   case $yml in
     proxy)
@@ -18,4 +18,7 @@ for yml in unbreak block proxy direct; do
   echo >> "$RULE"
   sed "$pattern" "$DIR/${yml}.yaml" >> "$RULE"
 done
+printf "\n  - GEOIP,CN,DIRECT,no-resolve" >> $target
+printf "\n  - GEOIP,LAN,DIRECT" >> $target
+printf "\n  - MATCH,PROXY" >> $target
 sed -i '/^[[:space:]]*$/d' "$RULE"
