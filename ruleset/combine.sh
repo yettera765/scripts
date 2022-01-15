@@ -17,5 +17,5 @@ for yml in unbreak block proxy direct; do
   esac
   echo >> "$RULE"
   sed "$pattern" "$DIR/${yml}.yaml" >> "$RULE"
-  sed -i '/^[[:space:]]*$/d' "$RULE"
 done
+sed -i '/^[[:space:]]*$/d' "$RULE"
