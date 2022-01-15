@@ -2,8 +2,19 @@ DIR="$1/clash"
 RULE="$DIR/rules"
 
 rm -f "$RULE"
-pattern='s/payload://g; s/^  - //g; /^[[:space:]]*$/d'
+pat='s/payload://g; s/^  - //g; /^[[:space:]]*$/d;'
 for yml in unbreak block proxy direct; do
+  case $yaml in
+    proxy)
+      pattern="${pat} s/$/,PROXY/g"
+      ;;
+    unbreak | direct)
+      pattern="${pat} s/$/,DIRECT/g"
+      ;;
+    block | block-lite) 
+      pattern="${pat} s/$/,REJECT/g"
+      ;;
+  esac
   sed "$pattern" "$DIR/${yml}.yaml" >> "$RULE"
   echo >> "$RULE"
 done
