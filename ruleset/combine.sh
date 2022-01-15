@@ -18,7 +18,7 @@ for yml in unbreak block proxy direct; do
   echo >> "$RULE"
   sed "$pattern" "$DIR/${yml}.yaml" >> "$RULE"
 done
-printf "\n  - GEOIP,CN,DIRECT,no-resolve" >> $target
-printf "\n  - GEOIP,LAN,DIRECT" >> $target
-printf "\n  - MATCH,PROXY" >> $target
+printf "\n  - GEOIP,CN,DIRECT,no-resolve" >> "$RULE"
+printf "\n  - GEOIP,LAN,DIRECT" >> "$RULE"
+printf "\n  - MATCH,PROXY" >> "$RULE"
 sed -i '/^[[:space:]]*$/d' "$RULE"
