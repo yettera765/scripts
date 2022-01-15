@@ -34,6 +34,9 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/rulesets/
           date > generated.txt
+          rm -f ./clash/rules
+          pattern='s/payload://g; s/^  - //g; /^[[:space:]]*$/d'
+          for yml in unbreak block proxy direct; do sed "$pattern" ./clash/${yml}.yaml >> ./clash/rules ; done
           curl -L -o Country.mmdb https://github.com/yettera765/mmdb-builder/releases/download/latest/Country.mmdb
           git config user.name github-actions
           git config user.email github-actions@github.com
