@@ -21,7 +21,6 @@ DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,wx.qq.com
 # subs
 DOMAIN,tiny.one
-DOMAIN,bit.ly
 DOMAIN,cdn.jsdelivr.net
 # others
 DOMAIN-SUFFIX,cmpassport.com
