@@ -3,8 +3,7 @@ RULE="$DIR/rules"
 
 rm -f "$RULE"
 pat='s/payload://g; /^[[:space:]]*$/d;'
-BLOCK="$2"
-for yml in unbreak $BLOCK proxy direct; do
+for yml in unbreak block-lite proxy direct; do
   case $yml in
     proxy)
       pattern="${pat} s/$/,PROXY/g"
