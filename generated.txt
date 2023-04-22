@@ -1,0 +1,7 @@
+Sat Apr 22 10:51:22 UTC 2023
+sing-box version unknown
+
+Environment: go1.18.10 linux/amd64
+Tags: with_quic,with_wireguard,with_grpc
+Revision: d3b90797c1f6a275d3482a33be34197cbb2fc1c7
+CGO: enabled
